@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { EmptyComponent } from '../../shared/components/empty/empty.component';
-import { CourseService } from '../services/course/course.service';
+import { CourseService } from '@shared/services/course/course.service';
 
 @Component({
   standalone: true,

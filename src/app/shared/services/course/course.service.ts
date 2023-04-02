@@ -3,7 +3,7 @@ import { Inject, Injectable } from '@angular/core';
 import { Observable, take } from 'rxjs';
 
 import { API_URL } from './../../../../main';
-import { Course } from '../../../shared/interface/course.interface';
+import { Course } from '@shared/interfaces/course.interface';
 
 @Injectable({
   providedIn: 'root'

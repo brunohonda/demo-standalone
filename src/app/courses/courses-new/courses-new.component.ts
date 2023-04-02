@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
-import { CategoryService } from './../services/category/category.service';
-import { CourseService } from './../services/course/course.service';
+import { CategoryService } from '@shared/services/category/category.service';
+import { CourseService } from '@shared/services/course/course.service';
 
 @Component({
   standalone: true,
