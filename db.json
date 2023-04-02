@@ -4,15 +4,5 @@
     "Backend"
   ],
   "courses": [
-    {
-      "name": "srdfgqasdfs",
-      "category": "Frontend",
-      "id": 1
-    },
-    {
-      "name": "srdfgqasdfs",
-      "category": "Frontend",
-      "id": 2
-    }
   ]
 }
