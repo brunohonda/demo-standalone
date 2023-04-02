@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
-import { CoursesService } from '../services/courses.service';
 import { EmptyComponent } from '../../shared/components/empty/empty.component';
+import { CourseService } from '../services/course/course.service';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, EmptyComponent],
+  imports: [CommonModule, RouterLink, EmptyComponent],
   templateUrl: './courses-list.component.html',
   styleUrls: ['./courses-list.component.scss']
 })
@@ -14,6 +15,6 @@ export class CoursesListComponent {
   courses$ = this.service.get();
 
   constructor(
-    private readonly service: CoursesService
+    private readonly service: CourseService
   ) {}
 }

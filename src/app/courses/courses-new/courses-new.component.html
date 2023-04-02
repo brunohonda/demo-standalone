@@ -1,0 +1,16 @@
+<form [formGroup]="form" (ngSubmit)="createCourse()" >
+  <div>
+    <label for="name">Nome</label>
+    <input type="text" id="name" formControlName="name" />
+  </div>
+  <div>
+    <label for="name">Categoria</label>
+    <select id="category" formControlName="category">
+      <option disabled ngValue="">Selecione uma categoria</option>
+      <option *ngFor="let category of categories$ | async" [ngValue]="category">{{ category }}</option>
+    </select>
+  </div>
+  <div>
+    <button type="submit" [disabled]="form.invalid">Cadastrar</button>
+  </div>
+</form>

@@ -1,22 +1,22 @@
-import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { API_URL } from '../../../main';
+import { Inject, Injectable } from '@angular/core';
 import { Observable, take } from 'rxjs';
-import { Course } from 'src/app/shared/interface/couse.interface';
+
+import { API_URL } from './../../../../main';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CoursesService {
+export class CategoryService {
 
   constructor(
     private readonly httpClient: HttpClient,
     @Inject(API_URL) private readonly apiUrl: string
   ) { }
 
-  get(): Observable<Course[]> {
+  get(): Observable<string[]> {
     return this.httpClient
-      .get<Course[]>(`${ this.apiUrl }/courses`)
+      .get<string[]>(`${ this.apiUrl }/categories`)
       .pipe(take(1));
   }
 }

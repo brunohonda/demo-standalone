@@ -1,4 +1,7 @@
-<h2>Lista de Cursos</h2>
+<header>
+  <h2>Lista de Cursos</h2>
+  <a [routerLink]="['..', 'new']">Novo</a>
+</header>
 
 <div *ngIf="courses$ | async as courses; else errorTemplate">
   <ul *ngIf="courses.length > 0; else emptyTemplate" >
