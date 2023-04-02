@@ -11,7 +11,7 @@ import { CourseService } from './../services/course/course.service';
   templateUrl: './courses-new.component.html',
   styleUrls: ['./courses-new.component.scss']
 })
-export default class CoursesNewComponent {
+export class CoursesNewComponent {
   form = this.buildForm();
   categories$ = this.categoryService.get();
 
