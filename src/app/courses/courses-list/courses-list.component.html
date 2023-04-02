@@ -1,0 +1,15 @@
+<h2>Lista de Cursos</h2>
+
+<div *ngIf="courses$ | async as courses; else errorTemplate">
+  <ul *ngIf="courses.length > 0; else emptyTemplate" >
+    <li *ngFor="let course of courses">{{ course.name | titlecase }}</li>
+  </ul>
+</div>
+
+<ng-template #errorTemplate>
+  <p>Erro ao consultar cursos</p>
+</ng-template>
+
+<ng-template #emptyTemplate>
+  <app-empty resource="curso"></app-empty>
+</ng-template>
