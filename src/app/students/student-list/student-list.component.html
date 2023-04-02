@@ -1,0 +1,13 @@
+<div *ngIf="students$ | async as students; else errorTemplate">
+  <ul *ngIf="students.length > 0; else emptyTemplate">
+    <li *ngFor="let student of students">{{ student.name }}</li>
+  </ul>
+</div>
+
+<ng-template #errorTemplate>
+  <p>Erro ao carregar alunos</p>
+</ng-template>
+
+<ng-template #emptyTemplate>
+  <app-empty recourse="aluno"></app-empty>
+</ng-template>
