@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterModule],
   template: `
-    <h2>Alunos</h2>
+    <header>
+      <h2>Alunos</h2>
+      <a [routerLink]="['new']">Novo</a>
+    </header>
     <router-outlet></router-outlet>
   `,
 })

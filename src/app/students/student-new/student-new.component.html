@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="createStudent()">
+  <div>
+    <label for="name">Nome</label>
+    <input type="text" id="name" formControlName="name" />
+  </div>
+  <div>
+    <button type="submit" [disabled]="form.invalid">Cadastrar</button>
+  </div>
+</form>

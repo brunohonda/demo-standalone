@@ -20,4 +20,10 @@ export class StudentService {
       .get<Student[]>(`${this.apiUrl}/students`)
       .pipe(take(1))
   }
+
+  create(data: Student): Observable<void> {
+    return this.httpClient
+      .post<void>(`${this.apiUrl}/students`, data)
+      .pipe(take(1));
+  }
 }
